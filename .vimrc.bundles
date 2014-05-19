@@ -1,0 +1,15 @@
+" Vundle manage vundle (required)
+Bundle 'gmarik/Vundle.vim'
+
+" Bundles...
+Bundle 'scrooloose/nerdtree'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'Valloric/YouCompleteMe'
+
+" Themes...
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'sickill/vim-monokai'
