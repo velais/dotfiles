@@ -8,6 +8,7 @@ Bundle 'bling/vim-bufferline'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'derekwyatt/vim-scala.git'
 
 " Themes...
 Bundle 'nanotech/jellybeans.vim'
