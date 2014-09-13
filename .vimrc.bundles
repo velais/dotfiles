@@ -9,6 +9,10 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'derekwyatt/vim-scala.git'
+Bundle 'wting/rust.vim'
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'rking/ag.vim'
+Bundle 'kien/ctrlp.vim'
 
 " Themes...
 Bundle 'nanotech/jellybeans.vim'
