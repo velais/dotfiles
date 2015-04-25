@@ -12,16 +12,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 
-# Colours
+# Exports
 export TERM=xterm-256color
-# Python path
-#export PYTHONSTARTUP=~/.pythonrc
-
-# Docker
-export DOCKER_HOST=tcp://localhost:4243
-
-#Android sdk
-export ANDROID_SDK_HOME=/usr/local/Cellar/android-sdk/22.6.2
+export EDITOR=vim
 
 # Alias
 alias sz='source ~/.zshrc'
