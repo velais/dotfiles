@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 # Plugins
-plugins=(git brew docker python zsh-syntax-highlighting lein web-search scala tmux)
+plugins=(git brew docker python zsh-syntax-highlighting lein web-search scala tmux z)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,6 +19,12 @@ export EDITOR=vim
 # Alias
 alias sz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
+
+# Source local configuration
+if [ -f '.zshrc.local' ]; then
+    alias elz='vim ~/.zshrc.local'
+    source .zshrc.local
+fi
 
 # Start tmux
 if command -v tmux>/dev/null; then
