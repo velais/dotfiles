@@ -1,11 +1,41 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# load zgen
+source "${HOME}/.bin/zgen/zgen.zsh"
+
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    zgen oh-my-zsh
+
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/python
+    zgen oh-my-zsh plugins/tmux
+    zgen oh-my-zsh plugins/z
+    zgen oh-my-zsh plugins/docker
+    zgen oh-my-zsh plugins/command-not-found
+    zgen load zsh-users/zsh-syntax-highlighting
+
+    # bulk load
+    zgen loadall <<EOPLUGINS
+        zsh-users/zsh-history-substring-search
+        /path/to/local/plugin
+EOPLUGINS
+    # ^ can't indent this EOPLUGINS
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # theme
+    zgen oh-my-zsh themes/robbyrussell
+
+    # save all to init script
+    zgen save
+fi
 
 # Zsh theme
 ZSH_THEME="robbyrussell"
-
-# Plugins
-plugins=(git brew docker python zsh-syntax-highlighting lein web-search scala tmux z)
 
 source $ZSH/oh-my-zsh.sh
 
