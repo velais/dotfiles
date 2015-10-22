@@ -3,5 +3,5 @@
 # Symlink configs to home folder
 ln -s `realpath ./.zshrc` `realpath ..`/.zshrc
 ln -s `realpath ./.vimrc` `realpath ..`/.vimrc
-ln -s `realpath ./.vimrc.bundles` `realpath ..`/.vimrc.bundles
+ln -s `realpath ./.vimrc.plug` `realpath ..`/.vimrc.plug
 ln -s `realpath ./.tmux.conf` `realpath ..`/.tmux.conf

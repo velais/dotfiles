@@ -2,11 +2,9 @@ set nocompatible              " be iMproved, required
 filetype on                   " something
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
 
-if filereadable(expand("~/.vimrc.bundles"))
-	source ~/.vimrc.bundles
+if filereadable(expand("~/.vimrc.plug"))
+	source ~/.vimrc.plug
 endif
 
 syntax on                     " turn on syntax highlighting
