@@ -61,6 +61,6 @@ if executable('ag')
 endif
 
 " Racer - Rust completion
-let g:racer_cmd = "/usr/local/src/racer/target/release/racer"
-let $RUST_SRC_PATH = "/usr/local/src/rust/src/"
+let g:racer_cmd = "~/.vim/plugged/racer/target/release/racer"
+let $RUST_SRC_PATH = "/usr/local/src/rustc-nightly/src"
 

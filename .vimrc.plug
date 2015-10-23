@@ -7,14 +7,17 @@ Plug 'bling/vim-bufferline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'Valloric/YouCompleteMe'
-Plug 'derekwyatt/vim-scala.git'
+Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'cespare/vim-toml'
-Plug 'phildawes/racer'
+Plug 'phildawes/racer' " Need to build this with rust
+Plug 'racer-rust/vim-racer' " Use racer in vim
+" Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 
 " Themes...
 Plug 'nanotech/jellybeans.vim'
