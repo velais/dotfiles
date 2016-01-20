@@ -37,6 +37,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set mouse=a
 set ttymouse=xterm2
+set clipboard+=unnamedplus
 
 " Color Scheme
 set t_Co=256

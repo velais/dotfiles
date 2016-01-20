@@ -40,11 +40,14 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/home/alex/.linuxbrew/bin"
 
 # Exports
 export TERM=xterm-256color
 export EDITOR=vim
+export BROWSER=google-chrome
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/jre/bin/java::")
+export PYTHONSTARTUP="/home/alex/.lib/.pythonstartup.py"
 
 # Alias
 alias sz='source ~/.zshrc'
