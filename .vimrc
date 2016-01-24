@@ -11,11 +11,8 @@ syntax on                     " turn on syntax highlighting
 
 filetype plugin indent on
 
-" Key Binding
-noremap! jj <ESC>
-set pastetoggle=<F2>
-
 " Set..
+set directory=~/.vim/swap//,.
 set hidden
 set hls
 set ruler
@@ -39,6 +36,18 @@ set mouse=a
 set ttymouse=xterm2
 set clipboard+=unnamedplus
 
+" Key Binding
+noremap! jj <ESC>
+set pastetoggle=<F2>
+map q: :q
+
+" Key shortcuts
+let mapleader = ','
+nnoremap <leader>a :Ag<space>
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader><space> :StripWhitespace<CR>
+
 " Color Scheme
 set t_Co=256
 set t_ut=
@@ -53,6 +62,9 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+" NERDTree
+let NERDTreeShowHidden=1
+
 " Ctrl-P
 if executable('ag')
     " Use Ag over Grep
@@ -60,6 +72,7 @@ if executable('ag')
     "Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
     let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore .git -g ""'
 endif
+let g:ctrlp_show_hidden = 1
 
 " Racer - Rust completion
 let g:racer_cmd = "~/.vim/plugged/racer/target/release/racer"
