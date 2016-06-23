@@ -34,7 +34,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set mouse=a
 set ttymouse=xterm2
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 
 " Key Binding
 noremap! jj <ESC>
@@ -76,5 +76,5 @@ let g:ctrlp_show_hidden = 1
 
 " Racer - Rust completion
 let g:racer_cmd = "~/.vim/plugged/racer/target/release/racer"
-let $RUST_SRC_PATH = "/usr/local/src/rustc-nightly/src"
+let $RUST_SRC_PATH = "/usr/local/src/rustc-1.6.0/src"
 

@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Symlink configs to home folder
-ln -s `realpath ./.zshrc` `realpath ..`/.zshrc
-ln -s `realpath ./.vimrc` `realpath ..`/.vimrc
-ln -s `realpath ./.vimrc.plug` `realpath ..`/.vimrc.plug
-ln -s `realpath ./.tmux.conf` `realpath ..`/.tmux.conf
+cd ~
+ln -s ~/.dot-files/.zshrc .zshrc
+ln -s ~/.dot-files/.vimrc .vimrc
+ln -s ~/.dot-files/.vimrc.plug .vimrc.plug
+ln -s ~/.dot-files/.tmux.conf .tmux.conf

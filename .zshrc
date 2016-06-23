@@ -15,12 +15,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/z
     zgen oh-my-zsh plugins/docker
     zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/gradle
     zgen load zsh-users/zsh-syntax-highlighting
 
     # bulk load
     zgen loadall <<EOPLUGINS
         zsh-users/zsh-history-substring-search
-        /path/to/local/plugin
 EOPLUGINS
     # ^ can't indent this EOPLUGINS
 
@@ -46,7 +46,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/home/
 export TERM=xterm-256color
 export EDITOR=vim
 export BROWSER=google-chrome
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/jre/bin/java::")
 export PYTHONSTARTUP="/home/alex/.lib/.pythonstartup.py"
 
 # Alias
