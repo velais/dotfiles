@@ -1,8 +1,0 @@
-#!/bin/bash
-
-# Symlink configs to home folder
-cd ~
-ln -s ~/.dot-files/.zshrc .zshrc
-ln -s ~/.dot-files/.vimrc .vimrc
-ln -s ~/.dot-files/.vimrc.plug .vimrc.plug
-ln -s ~/.dot-files/.tmux.conf .tmux.conf
