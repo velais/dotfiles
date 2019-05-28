@@ -16,7 +16,9 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/docker
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/gradle
+    zgen oh-my-zsh plugins/brew
     zgen load zsh-users/zsh-syntax-highlighting
+    zgen load zsh-users/zsh-completions src
 
     # bulk load
     zgen loadall <<EOPLUGINS
@@ -40,13 +42,21 @@ ZSH_THEME="robbyrussell"
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
+export GOPATH=~/go
+export GOBIN=~/go/bin
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/home/alex/.linuxbrew/bin"
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$GOBIN"
 
 # Exports
 export TERM=xterm-256color
 export EDITOR=vim
 export BROWSER=google-chrome
 export PYTHONSTARTUP="/home/alex/.lib/.pythonstartup.py"
+. /usr/local/etc/profile.d/z.sh
+
 
 # Alias
 alias sz='source ~/.zshrc'
@@ -58,7 +68,9 @@ if [ -f '.zshrc.local' ]; then
     source .zshrc.local
 fi
 
+
 # Start tmux
 if command -v tmux>/dev/null; then
       [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session
 fi
+

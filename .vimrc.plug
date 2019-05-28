@@ -14,10 +14,10 @@ Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'cespare/vim-toml'
-Plug 'phildawes/racer' " Need to build this with rust
-Plug 'racer-rust/vim-racer' " Use racer in vim
+"Plug 'phildawes/racer' " Need to build this with rust
+"Plug 'racer-rust/vim-racer' " Use racer in vim
 Plug 'jiangmiao/auto-pairs'
-Plug 'ensime/ensime-vim'
+"Plug 'ensime/ensime-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'guns/vim-sexp'
