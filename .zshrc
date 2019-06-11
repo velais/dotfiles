@@ -1,47 +1,41 @@
-# load zgen
-source "${HOME}/.zgen/zgen.zsh"
+# Zplugin - https://github.com/zdharma/zplugin
+source ~/.zplugin/bin/zplugin.zsh
+setopt promptsubst
+zplugin ice lucid
+zplugin snippet OMZ::lib/git.zsh
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin snippet OMZ::themes/robbyrussell.zsh-theme
+zplugin ice wait"0" lucid
+zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin ice wait"0" atload"_zsh_autosuggest_start; ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'" lucid
+zplugin light zsh-users/zsh-autosuggestions
+zplugin ice wait"0" atinit"zpcompinit; zpcdreplay" lucid
+zplugin light zdharma/fast-syntax-highlighting
 
-# check if there's no init script
-if ! zgen saved; then
-    echo "Creating a zgen save"
+# Zsh completions
+zstyle ':completion:*' menu yes select
 
-    zgen oh-my-zsh
+# Zsh history
+bindkey '^R' history-incremental-pattern-search-backward
+setopt extended_history
+setopt inc_append_history
+setopt share_history
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_expire_dups_first
+setopt hist_save_no_dups
+setopt hist_ignore_space
+setopt hist_verify
+HISTSIZE=10000
+HISTFILE=~/.cache/.zsh_history
+SAVEHIST=10000
 
-    # plugins
-    zgen oh-my-zsh plugins/git
-    zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/python
-    zgen oh-my-zsh plugins/tmux
-    zgen oh-my-zsh plugins/z
-    zgen oh-my-zsh plugins/docker
-    zgen oh-my-zsh plugins/command-not-found
-    zgen oh-my-zsh plugins/gradle
-    zgen oh-my-zsh plugins/brew
-    zgen load zsh-users/zsh-syntax-highlighting
-    zgen load zsh-users/zsh-completions src
+# Zsh bells
+unsetopt beep
+unsetopt hist_beep
+unsetopt list_beep
 
-    # bulk load
-    zgen loadall <<EOPLUGINS
-        zsh-users/zsh-history-substring-search
-EOPLUGINS
-    # ^ can't indent this EOPLUGINS
-
-    # completions
-    zgen load zsh-users/zsh-completions src
-
-    # theme
-    zgen oh-my-zsh themes/robbyrussell
-
-    # save all to init script
-    zgen save
-fi
-
-# Zsh theme
-ZSH_THEME="robbyrussell"
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
+# Env
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 export GOPATH=~/go
 export GOBIN=~/go/bin
@@ -49,8 +43,6 @@ export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/home/
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$GOBIN"
-
-# Exports
 export TERM=xterm-256color
 export EDITOR=vim
 export BROWSER=google-chrome
@@ -73,4 +65,3 @@ fi
 if command -v tmux>/dev/null; then
       [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session
 fi
-
