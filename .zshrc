@@ -1,5 +1,6 @@
 # Zplugin - https://github.com/zdharma/zplugin
 source ~/.zplugin/bin/zplugin.zsh
+autoload -U colors && colors
 setopt promptsubst
 zplugin ice lucid
 zplugin snippet OMZ::lib/git.zsh
