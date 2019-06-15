@@ -8,6 +8,8 @@ zplugin snippet OMZ::plugins/git/git.plugin.zsh
 zplugin snippet OMZ::themes/robbyrussell.zsh-theme
 zplugin ice wait"0" lucid
 zplugin snippet OMZ::plugins/git/git.plugin.zsh
+zplugin ice wait"0" blockf lucid
+zplugin light zsh-users/zsh-completions
 zplugin ice wait"0" atload"_zsh_autosuggest_start; ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'" lucid
 zplugin light zsh-users/zsh-autosuggestions
 zplugin ice wait"0" atinit"zpcompinit; zpcdreplay" lucid
@@ -40,14 +42,14 @@ unsetopt list_beep
 export LIBRARY_PATH="$LIBRARY_PATH:/usr/local/lib"
 export GOPATH=~/go
 export GOBIN=~/go/bin
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/home/alex/.linuxbrew/bin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$GOBIN"
+export PATH="$PATH:$HOME/lib/flutter/bin"
 export TERM=xterm-256color
 export EDITOR=vim
 export BROWSER=google-chrome
-export PYTHONSTARTUP="/home/alex/.lib/.pythonstartup.py"
 . /usr/local/etc/profile.d/z.sh
 
 
