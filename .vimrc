@@ -39,7 +39,7 @@ set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set mouse=a
 set ttymouse=xterm2
-" set clipboard+=unnamedplus
+set clipboard+=unnamed
 
 " Key Binding
 noremap! jj <ESC>
