@@ -19,7 +19,6 @@ zplugin light zdharma/fast-syntax-highlighting
 zstyle ':completion:*' menu yes select
 
 # Zsh history
-bindkey '^R' history-incremental-pattern-search-backward
 setopt extended_history
 setopt inc_append_history
 setopt share_history
@@ -32,6 +31,27 @@ setopt hist_verify
 HISTSIZE=10000
 HISTFILE=~/.cache/.zsh_history
 SAVEHIST=10000
+
+# Zsh vi-mode
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+bindkey '^P' up-history
+bindkey '^N' down-history
+bindkey '^?' backward-delete-char
+bindkey '^w' backward-kill-word
+bindkey -M viins 'jj' vi-cmd-mode
+
+precmd() { RPROMPT="" }
+function zle-line-init zle-keymap-select {
+   VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+   RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/} $EPS1"
+   zle reset-prompt
+}
+
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+export KEYTIMEOUT=20
 
 # Zsh bells
 unsetopt beep
@@ -68,3 +88,4 @@ fi
 if command -v tmux>/dev/null; then
       [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session
 fi
+
