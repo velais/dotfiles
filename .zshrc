@@ -67,7 +67,7 @@ export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$PATH:$GOBIN"
 export PATH="$PATH:$HOME/lib/flutter/bin"
-export TERM=xterm-256color
+export TERM=screen-256color
 export EDITOR=vim
 export BROWSER=google-chrome
 . /usr/local/etc/profile.d/z.sh
@@ -76,6 +76,11 @@ export BROWSER=google-chrome
 # Alias
 alias sz='source ~/.zshrc'
 alias ez='vim ~/.zshrc'
+
+# NeoVim
+if type nvim > /dev/null 2>&1; then
+      alias vim='nvim'
+fi
 
 # Source local configuration
 if [ -f '.zshrc.local' ]; then

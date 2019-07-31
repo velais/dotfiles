@@ -2,22 +2,16 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins...
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
-Plug 'bling/vim-bufferline'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'derekwyatt/vim-scala'
 Plug 'rust-lang/rust.vim'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'rking/ag.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'avakhov/vim-yaml'
 Plug 'cespare/vim-toml'
-"Plug 'phildawes/racer' " Need to build this with rust
-"Plug 'racer-rust/vim-racer' " Use racer in vim
 Plug 'jiangmiao/auto-pairs'
-"Plug 'ensime/ensime-vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'guns/vim-sexp'

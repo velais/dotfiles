@@ -13,7 +13,6 @@ if filereadable(expand("~/.vimrc.plug"))
 endif
 
 syntax on                     " turn on syntax highlighting
-
 filetype plugin indent on
 
 " Set..
@@ -38,7 +37,7 @@ set wrap "Wrap lines
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 set mouse=a
-set ttymouse=xterm2
+"set ttymouse=xterm2
 set clipboard+=unnamed
 
 " Key Binding
