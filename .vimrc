@@ -56,9 +56,8 @@ nnoremap <leader><space> :StripWhitespace<CR>
 set t_Co=256
 set t_ut=
 set background=dark
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-colorscheme hybrid
+let g:airline_powerline_fonts = 1
+colorscheme gruvbox
 
 " Rainbow parentheses
 au VimEnter * RainbowParenthesesToggle
