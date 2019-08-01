@@ -88,9 +88,11 @@ if [ -f '.zshrc.local' ]; then
     source .zshrc.local
 fi
 
-
 # Start tmux
+export TMUX_PRIMARY=main
 if command -v tmux>/dev/null; then
-      [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && tmux new-session
+    [ -z $TMUX ] &&  \
+    [ $(tmux display -t $TMUX_PRIMARY -p '#{?session_attached,0,1}' || echo 1) -eq 1 ] && \
+    tmux new-session -A -s $TMUX_PRIMARY
 fi
 
