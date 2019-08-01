@@ -81,3 +81,15 @@ let g:ctrlp_show_hidden = 1
 let g:racer_cmd = "~/.vim/plugged/racer/target/release/racer"
 let $RUST_SRC_PATH = "/usr/local/src/rustc-1.6.0/src"
 
+" Vimwiki
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_global_ext = 0
+let g:vimwiki_folding = 'custom'
+let g:vimwiki_filetypes = ['markdown']
+
+" vim_markdown
+let g:vim_markdown_folding_style_pythonic = 1
+let g:vim_markdown_override_foldtext = 0
+let g:vim_markdown_folding_level = 2
+
+

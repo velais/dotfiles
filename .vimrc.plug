@@ -19,6 +19,9 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'sheerun/vim-polyglot'
 Plug 'darfink/vim-plist'
 Plug 'vim-airline/vim-airline'
+Plug 'vimwiki/vimwiki', { 'branch': 'multi_ft' }
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Themes...
 Plug 'morhetz/gruvbox'
