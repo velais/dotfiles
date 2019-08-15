@@ -61,6 +61,8 @@ brew "libidn2"
 brew "libssh2"
 # Vorbis General Audio Compression Codec
 brew "libvorbis"
+# Mac App Store command-line interface
+brew "mas"
 # Java-based project management
 brew "maven"
 # Collection of tools that nobody wrote when UNIX was young
@@ -157,3 +159,9 @@ cask "visual-studio-code"
 cask "vlc"
 cask "webstorm"
 cask "xquartz"
+mas "Decked Builder", id: 406479348
+mas "Easy Pomodoro", id: 1439714447
+mas "Numbers", id: 409203825
+mas "Pixen", id: 525180431
+mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
