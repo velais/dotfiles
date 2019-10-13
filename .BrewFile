@@ -7,10 +7,14 @@ tap "koekeishiya/formulae"
 cask "adoptopenjdk8"
 # AdoptOpenJDK main binary releases for OpenJDK 8 with HotSpot
 brew "adoptopenjdk-openjdk8"
+# Interpreted, interactive, object-oriented programming language
+brew "python"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # Build tooling for Clojure
 brew "boot-clj"
+# The Clojure Programming Language
+brew "clojure"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
@@ -144,7 +148,6 @@ cask "docker"
 cask "figma"
 cask "firefox"
 cask "flux"
-cask "gog-galaxy"
 cask "goland"
 cask "google-backup-and-sync"
 cask "google-chrome"
