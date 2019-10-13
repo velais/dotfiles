@@ -39,6 +39,8 @@ set whichwrap+=<,>,h,l
 set mouse=a
 "set ttymouse=xterm2
 set clipboard+=unnamed
+set conceallevel=2
+set spelllang=en_gb
 
 " Key Binding
 noremap! jj <ESC>
@@ -92,4 +94,5 @@ let g:vim_markdown_folding_style_pythonic = 1
 let g:vim_markdown_override_foldtext = 0
 let g:vim_markdown_folding_level = 2
 
-
+" vim-instant-markdown
+let g:instant_markdown_autostart = 0
