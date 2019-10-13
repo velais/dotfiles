@@ -9,7 +9,8 @@ cask "adoptopenjdk8"
 brew "adoptopenjdk-openjdk8"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
-# Cross-platform make
+# Build tooling for Clojure
+brew "boot-clj"
 brew "cmake"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
@@ -19,6 +20,8 @@ brew "ctop"
 brew "go"
 # Go dependency management tool
 brew "dep"
+# Functional metaprogramming aware language built on Erlang VM
+brew "elixir"
 # Ogg Bitstream Library
 brew "libogg"
 # Free lossless audio codec
@@ -31,6 +34,8 @@ brew "git"
 brew "glew"
 # Core application library for C
 brew "glib"
+# International domain name library (IDNA2008, Punycode and TR46)
+brew "libidn2"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
@@ -48,15 +53,13 @@ brew "ios-deploy"
 # Manage your Java environment
 brew "jenv"
 # Publish-subscribe messaging rethought as a distributed commit log
-brew "kafka", restart_service: true
+brew "kafka"
 # Generic command-line non-JVM Apache Kafka producer and consumer
 brew "kafkacat"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Build tool for Clojure
 brew "leiningen"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # Vorbis General Audio Compression Codec
@@ -79,6 +82,8 @@ brew "pandoc"
 brew "perl"
 # Manage compile and link flags for libraries
 brew "pkg-config"
+# Object-relational database system
+brew "postgresql"
 # Monitor data's progress through a pipe
 brew "pv"
 # Reattach process (e.g., tmux) to background
@@ -132,12 +137,16 @@ brew "z"
 # UNIX shell (command interpreter)
 brew "zsh"
 cask "bitwarden"
+cask "cryptomator"
+cask "cyberduck"
 cask "daisydisk"
 cask "docker"
+cask "figma"
 cask "firefox"
 cask "flux"
-cask "gimp"
+cask "gog-galaxy"
 cask "goland"
+cask "google-backup-and-sync"
 cask "google-chrome"
 cask "intellij-idea-ce"
 cask "java"
@@ -145,14 +154,14 @@ cask "java11"
 cask "keepassx"
 cask "licecap"
 cask "openemu"
+cask "porting-kit"
 cask "postman"
-cask "processing"
+cask "pycharm-ce"
 cask "slack"
 cask "sourcetree"
 cask "spectacle"
 cask "spotify"
 cask "steam"
-cask "sublime-text3"
 cask "the-unarchiver"
 cask "vimr"
 cask "visual-studio-code"
